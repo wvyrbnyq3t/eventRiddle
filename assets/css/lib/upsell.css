@@ -1,0 +1,69 @@
+#upsell {
+  height: fit-content;
+  width: min(100dvw, var(--w-pc));
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  visibility: hidden;
+  z-index: 999;
+
+  .content {
+    background-color: #fff;
+    box-shadow: 0 0 0.1rem #333;
+    padding: var(--gutter);
+    padding-bottom: calc(var(--gutter) + env(safe-area-inset-bottom));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(0, 100%);
+    transition: all 0.4s;
+    width: min(100dvw, var(--w-pc));
+
+    &.is-show {
+      visibility: visible;
+      transform: none;
+    }
+    .content-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: var(--gutter);
+
+      .content-title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        width: 100%;
+      }
+      .btn-closeUpsell {
+        margin-left: auto;
+        display: block;
+        font-size: 2.4rem;
+        height: 1em;
+        width: 1em;
+        position: relative;
+
+        &::before {
+          content: "\e5cd";
+          height: 1em;
+          width: 1em;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          direction: ltr;
+          display: inline-block;
+          font-family: "Material Symbols Outlined";
+          font-size: 1em;
+          font-style: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          line-height: 1;
+          text-transform: none;
+          white-space: nowrap;
+          word-wrap: normal;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+:root {
+  /* color */
+  --c-txt: #4e4e4e;
+  --c-primary: #ed7a9b;
+  --c-gray: #ccc;
+  --c-red: #eb0001;
+  --c-green: #239d63;
+  --c-orange: #ff8466;
+  --c-blue: #0017c1;
+
+  /* background color */
+  --bgc-gray: rgba(236, 241, 244, 0.6);
+  --bgc-blue: #e3f2fe;
+  --bgc-blue_pale: #f1f8fe;
+  --bgc-gray_pale: #ecf1f4;
+  --bgc-overlay: rgba(0, 0, 0, 0.5);
+  --bdc-pale: #ecf1f4;
+
+  /* size */
+  --w-pc: 500px;
+
+  /* gutter */
+  --gutter: 1.6rem;
+}

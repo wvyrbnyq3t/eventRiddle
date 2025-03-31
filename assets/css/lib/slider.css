@@ -1,0 +1,100 @@
+#slider {
+  height: 100dvh;
+  width: min(100dvw, var(--w-pc));
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  visibility: hidden;
+  z-index: 100;
+
+  .content {
+    background-color: #fff;
+    height: 100dvh;
+    width: min(100dvw, var(--w-pc));
+    overflow: hidden auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(100%, 0);
+    transition: all 0.4s;
+
+    &.is-show {
+      transform: none !important;
+      visibility: visible;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .content-header {
+      position: fixed;
+      top: 1.6rem;
+      left: 1.6rem;
+
+      .btn-closeSlider {
+        display: block;
+        font-size: 2.4rem;
+        height: 1em;
+        width: 1em;
+        position: relative;
+
+        &::before {
+          height: 1em;
+          width: 1em;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          content: "\e5e0";
+          direction: ltr;
+          display: inline-block;
+          font-family: "Material Symbols Outlined";
+          font-size: 1em;
+          font-style: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          line-height: 1;
+          text-transform: none;
+          white-space: nowrap;
+          word-wrap: normal;
+        }
+      }
+    }
+    .content-Body {
+      padding: var(--gutter);
+    }
+  }
+  .content-bottom {
+    transform: translate(0, 100%);
+    transition: all 0.4s;
+
+    &.is-show {
+      transform: none !important;
+    }
+
+    .content-header {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      padding: calc(var(--gutter) * 0.75);
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      .btn-closeSlider {
+        &::before {
+          content: "\e5cd";
+        }
+      }
+      .content-title {
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}

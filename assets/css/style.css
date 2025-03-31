@@ -1,0 +1,255 @@
+html {
+  font-size: 10px;
+  touch-action: pan-x pan-y;
+}
+body {
+  color: var(--c-txt);
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  line-height: 1.5;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+
+  &.is-active {
+    overflow: hidden !important;
+  }
+}
+
+.page-content {
+  background-color: #fff;
+  box-shadow: 0 0 0.1rem #333;
+  height: 100%;
+  width: min(100%, var(--w-pc));
+  margin: 0 auto;
+  min-height: 100dvh;
+  position: relative;
+
+  main {
+    .contentBody {
+      padding: var(--gutter);
+    }
+  }
+}
+
+section {
+  &:not(:last-child) {
+    margin-bottom: var(--gutter);
+  }
+  > *:not(:last-child) {
+    margin-bottom: calc(var(--gutter) * 0.5);
+  }
+  .sec-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: var(--gutter) !important;
+  }
+}
+
+/* background */
+.bgc-red {
+  background-color: var(--c-red) !important;
+  color: #fff !important;
+}
+
+/* button style */
+.btn-primary {
+  background-color: var(--c-primary);
+  border-radius: 0.4rem;
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.75em 3em;
+  text-align: center;
+  transition: opacity 0.4s;
+  width: fit-content;
+
+  &:hover {
+    opacity: 0.7;
+  }
+  &[aria-disabled="true"] {
+    background-color: var(--c-gray);
+    cursor: not-allowed;
+  }
+}
+
+.btn-secondary {
+  border: 0.1rem solid var(--c-primary);
+  border-radius: 0.4rem;
+  color: var(--c-primary);
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.75em 3em;
+  text-align: center;
+  transition: opacity 0.4s;
+  width: fit-content;
+
+  &:hover {
+    opacity: 0.7;
+  }
+  &[aria-disabled="true"] {
+    border-color: var(--c-gray);
+    color: var(--c-gray);
+    cursor: not-allowed;
+  }
+}
+
+/* carousel */
+.carousel-banner {
+  display: grid;
+  gap: calc(var(--gutter) * 0.5);
+  grid-template-columns: repeat(var(--i), calc(100% - var(--gutter) * 2));
+  overflow: scroll hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 0.05rem;
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-item {
+    box-shadow: 0 0 0.1rem #333;
+    scroll-snap-align: center;
+    width: 100%;
+  }
+}
+.carousel-scroller {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--gutter) * 0.5);
+  overflow: scroll hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-item {
+    flex-shrink: 0;
+    width: fit-content;
+  }
+}
+
+/* column */
+.column-wrap {
+  display: grid;
+  gap: var(--gutter);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* icon style */
+.icn {
+  display: block;
+  font-size: 2.4rem;
+  height: 1em;
+  width: 1em;
+  position: relative;
+
+  &::before {
+    height: 1em;
+    width: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    direction: ltr;
+    display: inline-block;
+    font-family: "Material Symbols Outlined";
+    font-size: 1em;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+  }
+}
+
+.icn-large {
+  font-size: 3.2rem;
+}
+.icn-small {
+  font-size: 1.6rem;
+}
+
+.icn-arrow-back {
+  &::before {
+    content: "\e5e0";
+  }
+}
+.icn-close {
+  &::before {
+    content: "\e5cd";
+  }
+}
+
+/* image */
+.img-fullVis {
+  margin-left: calc((-1) * var(--gutter));
+  width: calc(100% + var(--gutter) * 2);
+}
+
+/* sp */
+.sp {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+.pc {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+/* text style */
+.fs-huge {
+  font-size: 3.2rem;
+}
+.fs-xlarge {
+  font-size: 2.4rem;
+}
+.fs-large {
+  font-size: 2rem;
+}
+.fs-medium {
+  font-size: 1.6rem;
+}
+.fs-small {
+  font-size: 1.2rem;
+}
+.fs-xsmall {
+  font-size: 1rem;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+.fw-light {
+  font-weight: 300;
+}
+
+.t-left {
+  text-align: left;
+}
+.t-center {
+  text-align: center;
+}
+.t-right {
+  text-align: right;
+}
+
+/* text color */
+.c-red {
+  color: var(--c-red) !important;
+}
+
+/* width */
+.w-100 {
+  width: 100%;
+}

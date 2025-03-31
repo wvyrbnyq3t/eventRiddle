@@ -1,0 +1,36 @@
+#scanQR {
+  height: 100dvh;
+  width: min(100dvw, var(--w-pc));
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  .scanQRHeader {
+    background-color: #fff;
+    padding: var(--gutter);
+    padding-top: calc(var(--gutter) + env(safe-area-inset-top));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    .title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  #scanQRCanvas {
+    background-color: var(--bgc-blue);
+    height: 100dvh;
+    width: min(100dvw, var(--w-pc));
+    object-fit: cover;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
