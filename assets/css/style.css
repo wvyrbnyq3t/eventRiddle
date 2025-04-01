@@ -45,7 +45,13 @@ section {
   .sec-title {
     font-size: 2rem;
     font-weight: 700;
-    margin-bottom: var(--gutter) !important;
+    margin-bottom: calc(var(--gutter) * 0.5) !important;
+  }
+
+  .container {
+    > *:not(:last-child) {
+      margin-bottom: calc(var(--gutter) * 0.25);
+    }
   }
 }
 
