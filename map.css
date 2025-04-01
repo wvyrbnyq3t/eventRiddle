@@ -8,9 +8,16 @@
   width: min(100dvw, var(--w-pc));
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
   z-index: 9;
   overflow: hidden;
+
+  .map-icn-inner {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
 
   .icn {
     background-color: #f7f5f5;
@@ -36,7 +43,7 @@
 
       &::before {
         background-color: #f7f5f5;
-        box-shadow: 0 0 .1rem #333;
+        box-shadow: 0 0 0.1rem #333;
         content: "";
         clip-path: polygon(0 0, 100% 0, 50% 100%);
         display: block;
@@ -51,15 +58,15 @@
     }
   }
   .icn-east {
-    top: 6%;
+    top: 70px;
     left: 41%;
   }
   .icn-west {
-    top: 44.5%;
+    top: 500px;
     left: 63%;
   }
   .icn-north {
-    top: 23%;
+    top: 260px;
     left: 47.5%;
   }
 }
