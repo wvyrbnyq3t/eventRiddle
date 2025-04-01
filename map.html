@@ -6,10 +6,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/root.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/lib/upsell.css" />
-    <link rel="stylesheet" href="./assets/css/lib/scanQR.css" />
-    <link rel="stylesheet" href="./assets/css/lib/slider.css" />
-    <link rel="stylesheet" href="./assets/css/lib/modal.css" />
+    <link rel="stylesheet" href="map.css" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0"
@@ -34,8 +31,35 @@
       <main>
         <div class="contentBody">
           <section>
-            <div class="img-fullVis">
-              <img src="./assets/images/map.png" alt="">
+            <div id="map">
+              <div class="map-img">
+                <div class="img-fullVis">
+                  <img src="./assets/images/map.png" alt="" />
+                </div>
+              </div>
+              <div class="map-icns">
+                <a href="#riddle02" class="icn" id="east">
+                  <p>
+                    <span>6</span>個
+                  </p>
+                </a>
+                <a href="#riddle02" class="icn" id="north">
+                  <p>
+                    <span>1</span>個
+                  </p>
+                </a>
+                <a href="#riddle02" class="icn" id="west">
+                  <p>
+                    <span>1</span>個
+                  </p>
+                </a>
+              </div>
+              <div class="map-lists">
+                <div class="list-item" id="east1">
+                  <div class="list-item-img"></div>
+                  <div class="list-item-txt"></div>
+                </div>
+              </div>
             </div>
           </section>
         </div>
@@ -47,10 +71,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
-    <script src="./assets/js/lib/scanQR.js"></script>
-    <script src="./assets/js/lib/upsell.js"></script>
-    <script src="./assets/js/lib/slider.js"></script>
-    <script src="./assets/js/lib/modal.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
