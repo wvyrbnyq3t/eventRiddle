@@ -3,6 +3,52 @@
   width: min(100dvw, var(--w-pc));
   padding: 1.6rem;
 }
+.map-icn {
+  height: 100dvh;
+  width: min(100dvw, var(--w-pc));
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  overflow: hidden;
+
+  .icn {
+    background-color: #f7f5f5;
+    box-shadow: 0 0 0.1rem #333;
+    border-radius: 0.8rem;
+    display: block;
+    height: 6rem;
+    width: 6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    p {
+      height: 100%;
+      width: 100%;
+      position: relative;
+
+      &::before {
+        background-color: #f7f5f5;
+        box-shadow: 0 0 .1rem #333;
+        content: "";
+        clip-path: polygon(0 0, 100% 0, 50% 100%);
+        display: block;
+        height: 2rem;
+        width: 2rem;
+        position: absolute;
+        bottom: -2rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+  .icn-east {
+    top: 5%;
+    left: 10%;
+  }
+}
 .map-lists {
   padding: 1.6rem;
   position: fixed;
@@ -33,14 +79,14 @@
     width: 100%;
 
     .list-item-img {
-      border: .2rem solid var(--c-primary);
+      border: 0.2rem solid var(--c-primary);
       border-radius: 99rem;
       height: 6rem;
       width: 6rem;
       overflow: hidden;
 
       img {
-        border: .2rem solid #fff;
+        border: 0.2rem solid #fff;
         border-radius: 99rem;
         height: 100%;
         width: 100%;
